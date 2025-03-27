@@ -1,0 +1,16 @@
+version: "2"
+linters:
+  default: all
+  disable:
+    - depguard # no need
+    - varnamelen # "ok" or "err" are good...
+    - cyclop # let's split but not too much
+    - gocyclo # same as above
+    - funlen # same as above
+    - gocognit # same as above
+    - testpackage # want to test private field
+    - mnd # numCtx / 2 = lol
+    - forcetypeassert # let's crash
+    - noctx # HN API works well, and so does Ollama :-)
+    - paralleltest # unparalleltest here
+    - revive # no comment
